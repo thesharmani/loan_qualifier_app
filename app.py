@@ -11,7 +11,7 @@ import fire
 import questionary
 from pathlib import Path
 #
-from qualifier.utils.fileio import load_csv
+from qualifier.utils.fileio import load_csv, save_csv
 
 from qualifier.utils.calculators import (
     calculate_monthly_debt_ratio,
@@ -103,14 +103,39 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
 
 def save_qualifying_loans(qualifying_loans):
+    using_cvs = False
+    header = ["Lender", "Max Loan Size", "Max Loan to Value", "Max Debt to Income", "Min Credit Score", "Interest Rate" ]
     """Saves the qualifying loans to a CSV file.
 
     Args:
         qualifying_loans (list of lists): The qualifying bank loans.
     """
     # @TODO: Complete the usability dialog for savings the CSV Files.
-    # YOUR CODE HERE!
+    
+    num_qualifying_loans = len(qualifying_loans)
 
+    if num_qualifying_loans == 0:
+        print("You do not qualify for a loan")
+    else:
+        tf_option = questionary.confirm(f"There are {num_qualifying_loans} qualifying loans available. Would you like them saved?").ask()
+
+        if tf_option == True:
+            while not using_cvs:
+                print ("")
+                cvspath = questionary.text("Enter path to save qualifying loans (.csv):").ask()
+                if cvspath == '':
+                    print("Please try again")
+                    continue
+                cvspath = Path(cvspath)
+                
+                #answer = questionary.confirm("File exists, overwrite?").ask()
+                if not cvspath.exists():
+                    save_csv(cvspath,qualifying_loans)
+                    using_cvs = True
+                else:
+                    sys.exit(f"Oops! Can't find this path: {csvpath}")
+        else:
+            print(f"Not able to save for {num_qualifying_loans}.")
 
 def run():
     """The main function for running the script."""
