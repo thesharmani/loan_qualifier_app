@@ -1,0 +1,89 @@
+(dev) niteshsharma@Niteshs-MBP loan_qualifier_app % history
+  190  cd loan_qualifier_app
+  191  code .
+  192  cd ..
+  193  ls
+  194  cd crypto_arbitrage.ipynb
+  195  code . 
+  196  ls
+  197  cd loan_qualifier_app
+  198  code . 
+  199  git status
+  200  git add
+  201  git add .
+  202  git status
+  203  git commit -m
+  204  git commit -m "Pushing C2"
+  205  git push
+? Enter a file path to a rate-sheet (.csv): data/daily_rate_sheet.csv
+? What's your credit score? 600
+? What's your current amount of monthly debt? 300
+? What's your total monthly income? 10000
+? What's your desired loan amount? 15000
+? What's your home value? 400000
+The monthly debt to income ratio is 0.03
+The loan to value ratio is 0.04.
+Found 2 qualifying loans
+? There are 2 qualifying loans available. Would you like them saved? Yes
+
+? Enter path to save qualifying loans (.csv): NewLoan.csv
+Traceback (most recent call last):
+  File "/Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py", line 158, in <module>
+    fire.Fire(run)
+  File "/Users/niteshsharma/opt/anaconda3/envs/dev/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+(dev) niteshsharma@Niteshs-MBP loan_qualifier_app % /Users/niteshsharma/opt/anaconda3/envs/dev/bi
+n/python /Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py
+? Enter a file path to a rate-sheet (.csv): data/daily_rate_sheet.csv
+(dev) niteshsharma@Niteshs-MBP loan_qualifier_app % /Users/niteshsharma/opt/anaconda3/envs/dev/bi
+n/python /Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py
+? Enter a file path to a rate-sheet (.csv): data/daily_rate_sheet.csv
+? What's your credit score? 600
+? What's your current amount of monthly debt? 300
+? What's your total monthly income? 10000
+? What's your desired loan amount? 15000
+? What's your home value? 400000
+The monthly debt to income ratio is 0.03
+The loan to value ratio is 0.04.
+Found 2 qualifying loans
+? There are 2 qualifying loans available. Would you like them saved? Yes
+
+? Enter path to save qualifying loans (.csv): NewLoanForMe.csv
+
+? Enter path to save qualifying loans (.csv):                                                    
+
+Cancelled by user
+
+Traceback (most recent call last):
+  File "/Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py", line 158, in <module>
+    fire.Fire(run)
+  File "/Users/niteshsharma/opt/anaconda3/envs/dev/lib/python3.10/site-packages/fire/core.py", line 141, in Fire
+    component_trace = _Fire(component, args, parsed_flag_args, context, name)
+  File "/Users/niteshsharma/opt/anaconda3/envs/dev/lib/python3.10/site-packages/fire/core.py", line 466, in _Fire
+    component, remaining_args = _CallAndUpdateTrace(
+  File "/Users/niteshsharma/opt/anaconda3/envs/dev/lib/python3.10/site-packages/fire/core.py", line 681, in _CallAndUpdateTrace
+    component = fn(*varargs, **kwargs)
+  File "/Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py", line 154, in run
+    save_qualifying_loans(qualifying_loans)
+  File "/Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py", 
+(dev) niteshsharma@Niteshs-MBP loan_qualifier_app % /Users/niteshsharma/opt/anaconda3/envs/dev/bi
+n/python /Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py
+? Enter a file path to a rate-sheet (.csv): data/daily_rate_sheet.csv
+? What's your credit score? 600
+? What's your current amount of monthly debt? 300
+? What's your total monthly income? 10000
+? What's your desired loan amount? 15000
+? What's your home value? 500000
+The monthly debt to income ratio is 0.03
+The loan to value ratio is 0.03.
+Found 2 qualifying loans
+? There are 2 qualifying loans available. Would you like them saved? Yes
+
+? Enter path to save qualifying loans (.csv): NewLoanThing.csv
+(dev) niteshsharma@Niteshs-MBP loan_qualifier_app % history
+  133  /usr/bin/python3 /Users/niteshsharma/Desktop/FinTech-Workspace/GitHub_Uploads/loan_qualifier_app/app.py
+  134  conda activate dev
+  135  pip install filer
+  136  pip install fire
+  137  pip install questionary
+  138  clear
