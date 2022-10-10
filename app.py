@@ -101,6 +101,7 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     return bank_data_filtered
 
+# As a note, I inadvertantly used "cvs" throughout the coding instead of "csv". The program still works as is.
 
 def save_qualifying_loans(qualifying_loans):
     using_cvs = False
@@ -133,7 +134,7 @@ def save_qualifying_loans(qualifying_loans):
                     save_csv(cvspath,qualifying_loans)
                     using_cvs = True
                 else:
-                    sys.exit(f"Oops! Can't find this path: {csvpath}")
+                    sys.exit(f"Oops! Can't find this path: {cvspath}")
         else:
             print(f"Not able to save for {num_qualifying_loans}.")
 

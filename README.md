@@ -1,14 +1,14 @@
-# Project Title
+# Loan Qualifier Application
 
 Just after the title, introduce your project by describing attractively what the project is about and what is the main problem that inspires you to create this project or what is the main contribution for the potential user of your project.
 
----
+--- The purpose of the project is to create a tool that can determine loan qualification and save qualifying loans as a CSV file
 
 ## Technologies
 
 Describe the technologies required to use your project such as programming languages, libraries, frameworks, and operating systems. Be sure to include the specific versions of any critical dependencies that you have used in the stable version of your project.
 
----
+--- Python, code done on VSCode
 
 ## Installation Guide
 
